@@ -1,6 +1,6 @@
-# chat-app
+# ION606's Chat-App
 
-Maybe someday I'll split this into seperate repos. Until then...
+My second attempt at a chat app! Find the first one at https://github.com/Proto-Chat
 
 ## Roadmap
 
