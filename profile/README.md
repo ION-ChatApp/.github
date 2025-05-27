@@ -19,29 +19,30 @@ My second attempt at a chat app! Find the first one at https://github.com/Proto-
 | **frontend react spa**          | typed API client, React-Query hooks, and pages/components covering chat UI, role, member and channel management, file upload, dropdowns, modals, etc. (e.g., **ManageRoles**) |
 | **dev-ops**                     | docker-compose stack (backend, frontend, Mongo, Redis, MinIO) and Dockerfiles for both services                                                                               |
 | **utilities and validation**    | express-validator schemas for inputs, async error wrapper, default asset generator, permission helpers                                                                        |
+| **Emojis**                      | embed into messages and when typed in chat                                                                                                                                    |
+| **search and discovery**        | implement `/servers/discover` (currently returns 404) and global search for servers                                                                                           |
 
 ---
 
 ### Future Features
 
-| category                            | components                                                                                                                                                  |
-| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **password and account management** | • user-initiated password change endpoint<br>• manager-level OTP reset flow for org members<br>• admin override resets and audit logging                    |
-| **email workflows**                 | nodemailer integration for member invites and OTP/password-reset e-mails                                                                                    |
-| **Who reacted popup**               | create a popup to show who reacted with what. Allow mods to remove reactions                                                                                |
-| **postgres migration**              | replace the Mongo-backed _users_ plugin with PostgreSQL and add Redis caching exclusively for frequent API-key permission checks                            |
-| **messages**                        | end-to-end message APIs (reactions, search), attachment lifecycle clean-up, typing indicators                                                               |
-| **Emojis**                          | emojis (server upload/delete embeds)                                                                                                                        |
-| **search and discovery**            | implement `/servers/discover` (currently returns 404) and global search for servers, users and messages                                                     |
-| **rate-limiting and security**      | per-route throttling, CSRF protection in cookies, fine-grained audit trail                                                                                  |
-| **frontend gaps**                   | UI for server discovery and global search, org dashboard, password-reset / invite screens, voice/video UI, push notifications, presence, full settings page |
-| **accessibility and i18n**          | keyboard navigation, ARIA roles                                                                                                                             |
-| **ci/cd and testing**               | automated lint + type checks, Jest unit tests, Cypress end-to-end, container build pipeline                                                                 |
-| **observability and ops**           | structured logging, metrics, alerting, secrets management, optional CDN front for MinIO                                                                     |
+| category                            | components                                                                                                                                                                    |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **password and account management** | • user-initiated password change endpoint<br>• manager-level OTP reset flow for org members<br>• admin override resets and audit logging<br>• Send a OTP when a user signs up |
+| **email workflows**                 | nodemailer integration for member invites and OTP/password-reset e-mails                                                                                                      |
+| **Who reacted popup**               | create a popup to show who reacted with what. Allow mods to remove reactions                                                                                                  |
+| **postgres migration**              | replace the Mongo-backed _users_ plugin with PostgreSQL and add Redis caching exclusively for frequent API-key permission checks                                              |
+| **messages**                        | end-to-end message APIs (reactions, search), attachment lifecycle clean-up, typing indicators                                                                                 |
+| **search**                          | global search for servers, users and messages                                                                                                                                 |
+| **rate-limiting and security**      | per-route throttling, CSRF protection in cookies, fine-grained audit trail                                                                                                    |
+| **frontend gaps**                   | UI for server discovery and global search, org dashboard, password-reset / invite screens, voice/video UI, push notifications, presence, full settings page                   |
+| **accessibility and i18n**          | keyboard navigation, ARIA roles                                                                                                                                               |
+| **ci/cd and testing**               | automated lint + type checks, Jest unit tests, Cypress end-to-end, container build pipeline                                                                                   |
+| **observability and ops**           | structured logging, metrics, alerting, secrets management, optional CDN front for MinIO                                                                                       |
 
 ### Far in the Future Features
 
-| category                  | components                                                                         |
-| ------------------------- | ---------------------------------------------------------------------------------- |
-| **voice / video**         | Actual signaling and media-server logic—API currently only stores `"type":"voice"` |
-| **mobile and PWA polish** | Responsive layouts, offline caching, and PWA manifest updates                      |
+| category                   | components                                                                         |
+| -------------------------- | ---------------------------------------------------------------------------------- |
+| **voice / video channels** | Actual signaling and media-server logic—API currently only stores `"type":"voice"` |
+| **mobile and PWA polish**  | Responsive layouts, offline caching, and PWA manifest updates                      |
